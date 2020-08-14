@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'index')->name('home');
+Route::view('/', 'index')->name('home')->middleware('auth');
 
 Route::layout('layouts.auth')->group(function () {
     Route::middleware('guest')->group(function () {

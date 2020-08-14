@@ -4,9 +4,9 @@
         <div>
             Per Page: &nbsp;
             <select wire:model="perPage" class="appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                <option>10</option>
-                <option>15</option>
                 <option>25</option>
+                <option>50</option>
+                <option>75</option>
             </select>
         </div>
         <div class="flex justify-end">

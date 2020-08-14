@@ -44,7 +44,9 @@
                                     <div class="text-sm leading-5 text-gray-500">{{ $d->server->ip }}</div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                    {{ $d->expires->format('m-d-Y') }}
+                                    @if($d->expires)
+                                        {{ $d->expires->format('m-d-Y') }}
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
@@ -56,13 +58,9 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 mt-5">
+    <div class="grid grid-cols-1 gap-4 mt-5">
         <div>
             {{ $domains->links() }}
-        </div>
-
-        <div class="flex justify-end text-gray-400 text-sm">
-            Showing {{ $domains->firstItem() }} to {{ $domains->lastItem() }} out of {{ $domains->total() }} results
         </div>
     </div>
 

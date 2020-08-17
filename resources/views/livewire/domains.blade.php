@@ -34,7 +34,7 @@
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
                         @foreach($domains as $d)
-                            <tr>
+                            <tr class="hover:bg-gray-100">
                                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                     <div class="text-sm leading-5 text-gray-900">{{ $d->name }}</div>
                                     <div class="text-sm leading-5 text-gray-500">{{ $d->domain }}</div>

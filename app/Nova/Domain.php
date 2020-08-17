@@ -44,9 +44,9 @@ class Domain extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')->sortable(),
+            ID::make(__('ID'), 'id')->hide(),
             BelongsTo::make('Server'),
-            Text::make('Name'),
+            Text::make('Name')->sortable(),
             Text::make('Domain'),
             Date::make('Expires')->nullable(),
             Textarea::make('Note')->nullable(),

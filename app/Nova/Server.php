@@ -42,8 +42,8 @@ class Server extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Name'),
+            ID::make(__('ID'), 'id')->hide(),
+            Text::make('Name')->sortable(),
             Text::make('IP Address', 'ip'),
             Text::make('Link'),
             Textarea::make('Note')->nullable(),

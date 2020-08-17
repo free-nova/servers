@@ -41,7 +41,7 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                     <div class="text-sm leading-5 text-gray-900">{{ $d->server->name }}</div>
-                                    <div class="text-sm leading-5 text-gray-500">{{ $d->server->ip }}</div>
+                                    <div class="text-sm leading-5 text-gray-500 hover:text-purple-700"><a href="{{ $d->server->link }}" target="_blank">{{ $d->server->ip }}</a></div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                     @if($d->expires)

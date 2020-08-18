@@ -48,3 +48,6 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', 'Auth\LogoutController')
         ->name('logout');
 });
+
+Notification::route('slack', env('SLACK_HOOK'))
+    ->notify(new \App\Notifications\PluginNotification());

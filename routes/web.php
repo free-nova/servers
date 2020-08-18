@@ -49,5 +49,5 @@ Route::middleware('auth')->group(function () {
         ->name('logout');
 });
 
-Notification::route('slack', env('SLACK_HOOK'))
-    ->notify(new \App\Notifications\PluginNotification());
+//Notification::route('slack', env('SLACK_HOOK'))
+//    ->notify(new \App\Notifications\PluginNotification());
